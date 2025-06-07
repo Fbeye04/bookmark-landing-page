@@ -9,6 +9,9 @@ module.exports = {
       colors: {
         blueFooter: "hsl(228, 45%, 44%)",
       },
+      container: {
+        center: true,
+      },
     },
   },
   plugins: [],

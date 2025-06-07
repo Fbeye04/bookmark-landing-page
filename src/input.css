@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .nav-desktop {
+    @apply lg:flex lg:relative lg:inset-auto lg:bg-transparent lg:flex-row 
+            lg:items-center lg:p-0 lg:w-auto lg:h-auto lg:space-x-8;
+  }
+}
