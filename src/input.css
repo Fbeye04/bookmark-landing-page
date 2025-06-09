@@ -7,4 +7,12 @@
     @apply lg:flex lg:relative lg:inset-auto lg:bg-transparent lg:flex-row 
             lg:items-center lg:p-0 lg:w-auto lg:h-auto lg:space-x-8;
   }
+
+  .tab-button {
+    @apply border-b-4 border-transparent;
+  }
+
+  [data-tab].tab-active {
+    @apply text-blue-950 font-medium border-red-400;
+  }
 }
