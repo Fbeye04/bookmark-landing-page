@@ -15,6 +15,9 @@
 
     <link rel="stylesheet" href="./output.css" />
     <script defer src="./index.js"></script>
+    <script
+      src="https://kit.fontawesome.com/ebfc0337fb.js"
+      crossorigin="anonymous"></script>
   </head>
   <body class="font-rubik">
     <header>
@@ -78,20 +81,16 @@
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Visit our Facebook page">
-              <img
-                src="./images/icon-facebook.svg"
-                alt="Facebook icon"
-                class="size-6 hover:opacity-75 transition-opacity" />
+              <i
+                class="fa-brands fa-square-facebook text-white hover:text-red-400 transition-colors text-4xl"></i>
             </a>
             <a
               href="#"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Visit our Twitter page">
-              <img
-                src="./images/icon-twitter.svg"
-                alt="Twitter icon"
-                class="size-6 hover:opacity-75 transition-opacity" />
+              <i
+                class="fa-brands fa-square-x-twitter text-white hover:text-red-400 transition-colors text-4xl"></i>
             </a>
           </div>
         </nav>
@@ -408,33 +407,101 @@
           </button>
         </div>
       </section>
+
+      <!-- CTA -->
+      <section class="bg-blue-600 text-white pt-16 pb-10">
+        <div class="container mx-auto px-6 text-center">
+          <p class="text-sm uppercase tracking-[0.3em] font-light mb-4">
+            35,000+ already joined
+          </p>
+          <h2 class="text-3xl lg:text-4xl font-medium lg:max-w-lg lg:mx-auto">
+            Stay up-to-date with what we’re doing
+          </h2>
+
+          <form
+            id="cta-form"
+            class="mt-8 flex flex-col lg:flex-row lg:items-center gap-4 max-w-lg mx-auto"
+            novalidate>
+            <div id="input-wrapper" class="relative w-full flex-grow">
+              <input
+                type="email"
+                id="email-input"
+                placeholder="Enter your email address"
+                class="w-full py-3 px-5 rounded-md text-black focus:outline-none focus:ring-2 focus:ring-blue-400" />
+              <img
+                class="error-icon hidden absolute top-1/2 -translate-y-1/2 right-4"
+                src="./images/icon-error.svg"
+                alt="error icon" />
+
+              <div
+                id="error-message"
+                class="error-message hidden absolute left-0 -bottom-6 w-full bg-red-400 text-white text-xs italic text-left py-1 px-3 rounded-b-md">
+                Whoops, make sure it's an email
+              </div>
+
+              <div
+                id="success-message"
+                class="hidden absolute left-0 -bottom-6 w-full bg-green-500 text-white text-xs italic text-left py-1 px-3 rounded-b-md">
+                Thank you for subscribing!
+              </div>
+            </div>
+
+            <button
+              type="submit"
+              class="bg-red-400 border-2 border-transparent w-full lg:w-auto lg:flex-shrink-0 font-semibold px-6 py-3 rounded-md shadow-lg hover:bg-white hover:text-red-400 hover:border-red-400 transition-colors duration-200 lg:px-8 lg:py-3 lg:text-sm">
+              Contact Us
+            </button>
+          </form>
+        </div>
+      </section>
     </main>
 
-    <!-- Question 1 -->
+    <footer class="bg-blue-950 text-white py-10">
+      <div
+        class="container mx-auto px-6 flex flex-col lg:flex-row justify-between items-center gap-5">
+        <div
+          class="flex flex-col justify-center items-center lg:items-start gap-x-8 gap-y-4">
+          <img
+            class="filter invert brightness-0"
+            src="./images/logo-bookmark.svg"
+            alt="bookmark app logo" />
 
-    <!-- Answer 1 -->
+          <p class="text-sm text-center mt-3 lg:mt-0 font-medium">
+            Challenge by
+            <a
+              href="https://www.frontendmentor.io?ref=challenge"
+              target="_blank"
+              >Frontend Mentor</a
+            >. Coded by
+            <a
+              class="text-blue-300 hover:underline"
+              href="https://www.linkedin.com/in/muhammad-fachrezi-barus/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Fachrezi</a
+            >.
+          </p>
+        </div>
 
-    <!-- Question 2 -->
-
-    <!-- Answer 2 -->
-
-    <!-- Question 3 -->
-
-    <!-- Answer 3 -->
-
-    <!-- Question 4 -->
-
-    <!-- Answer 4 -->
-    More Info 35,000+ already joined Stay up-to-date with what we’re doing
-    Contact Us Features Pricing Contact
-
-    <footer>
-      <p class="text-[11px] text-center">
-        Challenge by
-        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-          >Frontend Mentor</a
-        >. Coded by <a class="text-blueFooter" href="#">Your Name Here</a>.
-      </p>
+        <div class="flex items-center gap-10 mt-4 lg:mt-0">
+          <a
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Visit our Facebook page">
+            <i
+              class="fa-brands fa-square-facebook hover:text-red-400 transition-colors text-4xl"></i>
+          </a>
+          <a
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Visit our Twitter page">
+            <i
+              class="fa-brands fa-square-x-twitter hover:text-red-400 transition-colors text-4xl"></i>
+          </a>
+        </div>
+      </div>
     </footer>
   </body>
 </html>

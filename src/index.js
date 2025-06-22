@@ -33,6 +33,10 @@ const featureImage = document.getElementById("feature-image");
 const featureHeading = document.getElementById("feature-heading");
 const featureParagraph = document.getElementById("feature-paragraph");
 
+const ctaForm = document.getElementById("cta-form");
+const emailInput = document.getElementById("email-input");
+const inputWrapper = document.getElementById("input-wrapper");
+
 menuButton.addEventListener("click", () => {
   navMenu.classList.remove("hidden");
   navMenu.classList.add("flex");
@@ -79,4 +83,31 @@ const handleTabClick = (event) => {
 
 tabButtons.forEach((button) => {
   button.addEventListener("click", handleTabClick);
+});
+
+const clearAllStates = () => {
+  inputWrapper.classList.remove("error-state", "success-state");
+};
+
+ctaForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  clearAllStates();
+
+  if (!emailRegex.test(emailInput.value) || emailInput.value === "") {
+    inputWrapper.classList.add("error-state");
+  } else {
+    inputWrapper.classList.add("success-state");
+
+    emailInput.value = "";
+
+    setTimeout(() => {
+      clearMessages();
+    }, 3000);
+  }
+});
+
+emailInput.addEventListener("input", () => {
+  clearAllStates();
 });
